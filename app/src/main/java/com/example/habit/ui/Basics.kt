@@ -21,6 +21,7 @@ fun Basics(){
     ){
         Column{
             RowArrangement()
+            ColumnArrangement()
         }
 
     }
@@ -32,7 +33,10 @@ fun Basics(){
 @Composable
 fun RowArrangement(){
     Row(
-        modifier = Modifier.background(Color.Red).fillMaxWidth().padding(25.dp),
+        modifier = Modifier
+            .background(Color.Red)
+            .fillMaxWidth()
+            .padding(25.dp),
          verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceEvenly
 
@@ -47,11 +51,37 @@ fun RowArrangement(){
             Text(text = "Text 2" , color = Color.White)
             Text(text = "Text 3" , color = Color.White)
             Text(text = "Text 3" , color = Color.White)
+            Text(text = "Text 3" , color = Color.White)
 
 
     }
 }
 
+
+@Composable
+fun ColumnArrangement(){
+    Column(modifier = Modifier
+        .fillMaxWidth()
+        .fillMaxHeight(),
+        verticalArrangement = Arrangement.SpaceEvenly,
+        horizontalAlignment = Alignment.CenterHorizontally
+
+
+    ) {
+        val stylee = TextStyle( fontSize = 24.sp,
+            fontWeight = FontWeight.Bold,
+        color = Color.Red,
+        background = Color.Cyan )
+        Text(text = "Text 1", style =stylee)
+        Text(text = "Text 2", style =stylee)
+        Text(text = "Text 3", style =stylee)
+        Text(text = "Text 4", style =stylee)
+
+
+
+
+    }
+}
 
 @Preview(name="Basic Preview", showSystemUi = true)
 @Composable

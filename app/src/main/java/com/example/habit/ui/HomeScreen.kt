@@ -1,5 +1,6 @@
 package com.example.habit.ui
 
+import android.content.Intent
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -160,6 +161,10 @@ fun ChipSection(
                     )
                     .clickable {
                         selectedChipIndex = it
+                        if (chips[it] == "Basics ") {
+                            chips[it]
+                        }
+
                     }
                     .clip(RoundedCornerShape(10.dp))
                     .background(
