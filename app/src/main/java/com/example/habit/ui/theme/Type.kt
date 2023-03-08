@@ -37,5 +37,6 @@ val Ghothica1= FontFamily(
         R.font.gothica1_bold
     ),
     Font(R.font.gothica1_black),
+    Font(R.font.loveloblack),
     Font(R.font.gothica1_medium)
 )
