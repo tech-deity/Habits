@@ -13,11 +13,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.habit.R
 import com.example.habit.ui.theme.Ghothica1
 
 
@@ -44,9 +47,10 @@ fun LoginPage(){
             Text(text = "Login",
                         style = TextStyle(
                             fontSize = 40.sp,
-                            fontFamily = Ghothica1,
+                            fontFamily = FontFamily(
+                                Font(R.font.loveloblack)
 
-                            )
+                            ))
                 )
             
             Spacer(modifier = Modifier.height(20.dp))
